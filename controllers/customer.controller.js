@@ -1,6 +1,5 @@
 const customerService = require("../services/customer.services")
 const httpStatus = require('http-status');
-const Customer = require("../models/Customer");
 
 const findAllCustomer = async (req, res) => {
     const customers = await customerService.queryAllCustomer()
