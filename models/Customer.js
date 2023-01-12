@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const ActivityLogServices = require("../services/activitylog.services")
 
 const customerSchema = new mongoose.Schema({
     fullname : {
@@ -41,6 +42,8 @@ const customerSchema = new mongoose.Schema({
         default: false
     }
 })
+
+// ActivityLogServices.logging(customerSchema)
 
 module.exports = mongoose.model("Customer", customerSchema)
 /*
